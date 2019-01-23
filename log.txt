@@ -1,0 +1,38 @@
+(2019/01/20 04:15:38)	[INFO]		Starting Amnesia Modloader version 2.0.0 beta1
+(2019/01/20 04:15:38)	[INFO]		=== Startup initiating ===
+(2019/01/20 04:15:38)	[INFO]		Operating system: Windows 7
+(2019/01/20 04:15:38)	[INFO]		Setting up application settings...
+(2019/01/20 04:15:38)	[INFO]		Locking session...
+(2019/01/20 04:15:38)	[INFO]		Loading user settings...
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'UseCustomModDir' = false
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'ExcludedFolders' = /config;/custom_stories;/music;/maps;*entities*;*static_objects*;*sounds*;*textures*
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'AmnesiaDir' = D:\SteamLibrary\steamapps\common\Amnesia The Dark Descent
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'ModDir' = D:\SteamLibrary\steamapps\common\Amnesia The Dark Descent\mods
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'UseDefaults' = true
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'InstallCustomShaders' = false
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'ApplyPatch' = true
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'CheckForUpdates' = false
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'IconSize' = 48
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'UseSteam' = false
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'UseCache' = true
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'UpdateModList' = false
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'WarnAmnesiaVersion' = true
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'WarnShader' = true
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'WarnExec' = true
+(2019/01/20 04:15:38)	[INFO]		VAR SET: 'WarnSteam' = true
+(2019/01/20 04:15:38)	[INFO]		Detecing audio outputs...
+(2019/01/20 04:15:38)	[INFO]		Detecting screen resolution...
+(2019/01/20 04:15:38)	[INFO]		Detecting Amnesia version...
+(2019/01/20 04:15:38)	[INFO]		Setting up GUI...
+(2019/01/20 04:15:39)	[INFO]		Reading saved cache...
+(2019/01/20 04:15:39)	[INFO]		Loading image: D:\SteamLibrary\steamapps\common\Amnesia The Dark Descent\HOLMES\config\..\graphics\other\modloader.png
+(2019/01/20 04:15:39)	[INFO]		Loading image: D:\SteamLibrary\steamapps\common\Amnesia The Dark Descent\mods\belen\config\belen.png
+(2019/01/20 04:15:39)	[INFO]		Loading image: D:\SteamLibrary\steamapps\common\Amnesia The Dark Descent\mods\el_fantasma\config\el_fantasma.png
+(2019/01/20 04:15:39)	[INFO]		Loading image: D:\SteamLibrary\steamapps\common\Amnesia The Dark Descent\mods\modding mod\config\icon.png
+(2019/01/20 04:15:39)	[INFO]		Loading image: D:\SteamLibrary\steamapps\common\Amnesia The Dark Descent\mods\recursive_confinement\config\recur.png
+(2019/01/20 04:15:39)	[INFO]		Loading image: D:\SteamLibrary\steamapps\common\Amnesia The Dark Descent\SecondDimension\config\SecondDimensionIcon_aml.png
+(2019/01/20 04:15:39)	[INFO]		=== Startup complete ===
+(2019/01/20 04:15:39)	[INFO]		Entering GUI loop.
+(2019/01/20 04:15:40)	[INFO]		Creating cache for current list...
+(2019/01/20 04:15:40)	[INFO]		Unlocking session file.
+(2019/01/20 04:15:40)	[INFO]		=== Shutdown complete ===

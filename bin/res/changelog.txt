@@ -1,0 +1,6 @@
+February 2nd 2017 - version 1.6.6 - Windows
+
+- Added support for higher DPI scaling so the app doesn't look compressed while using above 100%.
+- Tweaked how the deployed config is checked so that it doesn't need to be updated for every release, but rather when I add anything to it.
+
+[Older changelogs can be found on the forum thread.]
