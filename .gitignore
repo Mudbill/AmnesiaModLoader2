@@ -25,7 +25,7 @@ hs_err_pid*
 .classpath
 .gitattributes
 .project
-/bin/
+bin/
 session.lock
 modlist.cache
 log.txt
