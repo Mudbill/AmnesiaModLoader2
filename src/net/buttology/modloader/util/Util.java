@@ -35,6 +35,41 @@ import org.eclipse.swt.widgets.Text;
 
 public class Util {
 
+	public static int[] detectPreviousVersion()
+	{
+		File logFile = new File("log.txt");
+		if(!logFile.isFile()) logFile = new File("log.log");
+		if(logFile.isFile())
+		{
+			String line = null;
+			try {
+				Scanner scanner = new Scanner(logFile);
+				if(scanner.hasNextLine()) line = scanner.nextLine();
+				scanner.close();
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			
+			if(line != null)
+			{
+				try
+				{
+					String[] parts = line.split(" ");
+					line = parts[parts.length - 1];
+					parts = line.split("\\.");
+					int[] version = new int[3];
+					for(int i = 0; i < parts.length; i++)
+					{
+						version[i] = Integer.parseInt(parts[i]);
+					}
+					return version;
+				}
+				catch(Exception e) {}
+			}
+		}
+		return null;
+	}
+	
 	public static void createShortcut(String target, String destination)
 	{
 		ShellLink sl = ShellLink.createLink(

@@ -21,3 +21,13 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+.classpath
+.gitattributes
+.project
+/bin/
+session.lock
+modlist.cache
+log.txt
+default_mod_settings.cfg
+preferences.cfg

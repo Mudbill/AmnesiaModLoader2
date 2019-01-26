@@ -7,12 +7,15 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.buttology.modloader.Modloader;
 import net.buttology.modloader.util.Log;
 import net.buttology.util.jeximel.Document;
 import net.buttology.util.jeximel.Element;
 import net.buttology.util.jeximel.XMLException;
 import net.buttology.util.jeximel.XMLParser;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.MessageBox;
+import org.eclipse.swt.widgets.Shell;
 
 public class UserSettings {
 	
@@ -98,7 +101,11 @@ public class UserSettings {
 		}
 		catch (XMLException e) {
 			e.printStackTrace();
-			Modloader.promptErrorMessage("Failed to read settings file.");
+			MessageBox m = new MessageBox(new Shell(), SWT.ICON_WARNING);
+			m.setText("Amnesia Modloader");
+			m.setMessage("Failed to read settings file. Either it is incorrectly written or it might be from an older version of the Modloader."
+					+ "\nIt will now do a fresh start.");
+			m.open();
 			return 2;
 		}
 		

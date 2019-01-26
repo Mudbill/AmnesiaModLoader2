@@ -11,6 +11,7 @@ import java.util.Arrays;
 import net.buttology.modloader.file.AppSettings;
 import net.buttology.modloader.file.FileHandler;
 import net.buttology.modloader.file.UserSettings;
+import net.buttology.modloader.gui.DialogChangelog;
 import net.buttology.modloader.gui.DialogGameRunning;
 import net.buttology.modloader.gui.DialogSettings;
 import net.buttology.modloader.gui.IShellPrimary;
@@ -33,7 +34,7 @@ import org.eclipse.swt.widgets.Shell;
 public class Modloader
 {
 	public static final String APP_NAME = "Amnesia Modloader";
-	public static final String APP_VERSION = "2.0.0 beta1";
+	public static final String APP_VERSION = "2.0.0";
 	public static final int[] APP_VERSION_ARRAY = new int[] {2, 0, 0};
 	
 	private static final String STEAM_PROTOCOL = "steam://";
@@ -99,15 +100,23 @@ public class Modloader
 			}
 			
 			Log.info("=== Startup complete ===");
+			
+			if(isPreviousVersionOlder())
+			{
+				Log.info("Previously ran version is older, opening changelog.");
+				DialogChangelog d = new DialogChangelog(SWT.TITLE | SWT.RESIZE | SWT.CLOSE);
+				d.open();
+			}
 
 			if(Start.firstTime)
 			{
-				MessageBox m = new MessageBox(new Shell(), SWT.ICON_INFORMATION);
+				Shell s = new Shell();
+				MessageBox m = new MessageBox(s, SWT.ICON_INFORMATION);
 				m.setText("Welcome");
 				m.setMessage("Thank you for downloading Amnesia Modloader. First we need to set some settings. "
 						+ "The only thing required is the Amnesia game directory, which might be automatically detected.");
 				m.open();
-				DialogSettings d = new DialogSettings(new Shell(), SWT.TITLE | SWT.RESIZE | SWT.MAX | SWT.MIN);
+				DialogSettings d = new DialogSettings(SWT.TITLE | SWT.RESIZE | SWT.MAX);
 				d.open();
 			}
 			
@@ -125,6 +134,23 @@ public class Modloader
 			e.printStackTrace();
 			promptErrorMessage("Something went wrong! Sorry about that. Maybe the log file can help pinpoint what caused it.\n\n"+e.getMessage());
 		}
+	}
+	
+	private static boolean isPreviousVersionOlder()
+	{
+		int[] current = APP_VERSION_ARRAY;
+		int[] previous = Start.getPreviouslyRanModloaderVersion();
+		if(previous != null)
+		{
+			for(int i = 0; i < current.length; i++)
+			{
+				if(current[i] > previous[i])
+				{
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 	
 	private static void update()

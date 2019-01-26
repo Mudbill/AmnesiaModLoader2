@@ -1,6 +1,5 @@
-February 2nd 2017 - version 1.6.6 - Windows
-
-- Added support for higher DPI scaling so the app doesn't look compressed while using above 100%.
-- Tweaked how the deployed config is checked so that it doesn't need to be updated for every release, but rather when I add anything to it.
-
-[Older changelogs can be found on the forum thread.]
+- Completely rewritten! A full changelog would take too long, so here are some key points.
+- Finding mods is way quicker thanks to an exclusion list which skips large folders of unnecessary data.
+- Interface has been redone. Still similar, but should function much smoother and look somewhat better.
+- Many more options, like being able to edit default mod settings and individual mod settings. No need for the default launcher anymore.
+- Better error reporting in case something goes wrong, which it hopefully won't!

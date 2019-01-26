@@ -7,6 +7,7 @@ import java.nio.channels.FileChannel;
 import java.nio.channels.FileLock;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import net.buttology.modloader.Modloader;
 
@@ -177,6 +178,15 @@ public class ResourceManager {
 		
 		images.add(finalImage);
 		return finalImage;
+	}
+	
+	public static String loadChangelog()
+	{
+		Scanner scanner = new Scanner(ResourceManager.class.getResourceAsStream("/res/changelog.txt"));
+		String text = "";
+		while(scanner.hasNextLine()) text += scanner.nextLine() + "\n";
+		scanner.close();
+		return text;
 	}
 	
 	public static Color getSystemColor(int colorId)

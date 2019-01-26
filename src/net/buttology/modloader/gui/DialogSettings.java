@@ -36,6 +36,16 @@ public class DialogSettings extends Dialog {
 		super(parent, style);
 		createContents(parent, style);
 	}
+	
+	/**
+	 * Create the dialog.
+	 * @param parent
+	 * @param style
+	 */
+	public DialogSettings(int style) {
+		super(new Shell(), style);
+		createContents(null, style);
+	}
 
 	/**
 	 * Open the dialog.
@@ -59,7 +69,10 @@ public class DialogSettings extends Dialog {
 	 * Create contents of the dialog.
 	 */
 	private void createContents(Shell parent, int style) {
-		shell = new Shell(parent, SWT.MAX | SWT.RESIZE | style);
+		if(parent == null)
+			shell = new Shell(style);
+		else
+			shell = new Shell(parent, style);
 		shell.setImage(ResourceManager.loadInternalImage("/res/icons/cogwheel.png"));
 		shell.setSize(635, 482);
 		shell.setMinimumSize(400, 430);

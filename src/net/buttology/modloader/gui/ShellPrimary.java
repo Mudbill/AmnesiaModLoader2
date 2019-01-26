@@ -352,6 +352,7 @@ public class ShellPrimary implements IShellPrimary {
 	}
 	
 	private void updateModList() {
+		if(UserSettings.getModDirectory() == null) return;
 		compositeModList.clearMods();
 		String startingDir = UserSettings.getModDirectory();
 		String configName = Modloader.getAppSettings().getMainInitConfigName();
@@ -360,13 +361,14 @@ public class ShellPrimary implements IShellPrimary {
 	}
 	
 	public void openOptionsForm() {
-		DialogSettings f = new DialogSettings(shell, SWT.DIALOG_TRIM | SWT.APPLICATION_MODAL);
+		DialogSettings f = new DialogSettings(shell, SWT.RESIZE | SWT.DIALOG_TRIM | SWT.APPLICATION_MODAL);
 		f.open();
 	}
 	
 	@Override
 	public void loadUserSettings() {
 		buttonOpenFolder.setEnabled(UserSettings.isSet("AmnesiaDir") && !UserSettings.getVar("AmnesiaDir").isEmpty());
+		buttonScanForMods.setEnabled(UserSettings.getModDirectory() != null && !UserSettings.getModDirectory().isEmpty());
 	}
 
 	@Override
