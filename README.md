@@ -10,7 +10,7 @@ AML2 is a Java based SWT application. The full list of additional libraries is:
 * [SWT](https://www.eclipse.org/swt/) - the Standard Widget Toolkit, for the native UI look.
 * [JeXiMeL](https://github.com/Mudbill/JeXiMeL) - my own XML parser for Java.
 * [mslinks](https://github.com/DmitriiShamrikov/mslinks) - a utility for making native Windows .lnk shortcut files.
-* SWTSplitButton - a widget for SWT to make a button display a menu.
+* [SWTSplitButton](https://code.google.com/archive/p/swtsplitbutton/) - a widget for SWT to make a button display a menu.
 
 If you wish to use the source code, these are required separately.
 
